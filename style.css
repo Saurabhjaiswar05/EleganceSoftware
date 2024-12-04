@@ -631,6 +631,10 @@ body {
   }
 }
 
+#statusMessage{
+  text-align: center;
+}
+
 /* fotter */
 
 .icons-top {
