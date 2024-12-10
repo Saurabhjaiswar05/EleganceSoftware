@@ -14,11 +14,10 @@
     <title>elegancesoftwares</title>
   </head>
   <body>
-    
     <nav id="homeid">
       <div id="bgColor" class="navbar">
         <div class="navbar-logo">
-          <img src="./assets/icon.jpeg" alt="icon">
+          <a href="/"><img src="./assets/icon.jpeg" alt="icon" /></a>
         </div>
         <div id="hideshow" class="navbar-menu">
           <a id="home" href="#homeid">HOME</a>
@@ -49,18 +48,17 @@
               </h1>
               <h1 class="box b3">
                 UI/UX<br />
-                 Design
-              </h1 >
+                Design
+              </h1>
               <h1 class="box b4">
                 Technical<br />
-                 Support
+                Support
               </h1>
               <h1 class="box b5">
                 Idea & <br />
                 Concept
               </h1>
             </div>
-            
           </div>
         </div>
       </div>
@@ -219,54 +217,62 @@
         <h1>Get in touch with us</h1>
 
         <form id="emailForm" class="form">
-          <input id="name" type="text" placeholder="Name" />
-          
-          <input id="email" type="text" placeholder="Email" />
-          
-          <input id="subject" type="text" placeholder="Subject" />
+          <input id="name" type="text" placeholder="Name" required />
 
-          <input id="message" placeholder="Message" />
-          
+          <input id="email" type="text" placeholder="Email" required />
+
+          <input id="subject" type="text" placeholder="Subject" required />
+
+          <input id="message" placeholder="Message" required />
+
           <button type="submit">SEND IT</button>
-        
         </form>
         <p id="statusMessage"></p>
       </div>
     </section>
 
     <!-- icons or logos -->
-    <section class="icons-top">
-      <video autoplay muted loop class="background-video">
-        <source src="./assets/airways.mp4" type="video/mp4">
-      </video>
-      <div class="icon-content">
+    <footer class="footer-section">
+      <section class="icons-top">
+        <div class="icon-content">
+          <div class="smallsc">
+            <div class="icon-logo">
+              <img src="./assets/icon.jpeg" alt="icon" />
+            </div>
+            <div class="footer-services">
+              <h1>Services</h1>
+              <p><a href="#servicesid">Web Development</a></p>
+              <p><a href="#servicesid">Web Design</a></p>
+              <p><a href="#servicesid">UI/UX Design</a></p>
+              <p><a href="#servicesid">App Design & Development</a></p>
+            </div>
+          </div>
 
-        <div class="icon-logo">
-          <img src="./assets/icon.jpeg" alt="icon">
+          <div class="smallsc">
+            <div class="contact-footer">
+              <h1>Contact</h1>
+              <p>
+                <i class="fa-solid fa-phone"></i> <label>+919967672613</label>
+              </p>
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+                <label>sjsaurabh082@gmail.com</label>
+              </p>
+            </div>
+            <div class="address-footer">
+              <h1>Address <i class="fa-solid fa-location-dot"></i></h1>
+              <p>Near Chunabhatti Railway station Sion(East)</p>
+              <p>Mumbai,Maharashtra, India.</p>
+            </div>
+          </div>
         </div>
-
-        <!-- <div class="logo-footer">
-          <h1>ELEGENCE</h1>
-        </div> -->
-  
-        <!-- <div class="logo-icons">
-          <a href="https://www.instagram.com/elegance_it_solution/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href=""><i class="fa-regular fa-envelope"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61569689889615"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          
-        </div> -->
-
-      </div>
-
-    </section>
-
-    <!-- foooter -->
-    <footer>
+      </section>
       <div class="footer">
-        <p>ELEGENCE © 2024.ALL RIGHS RESERVED</p>
+        <hr class="hr" />
+        <p>ELEGENCE SOFTWARES © 2024.ALL RIGHTS RESERVED</p>
       </div>
     </footer>
+
     <!-- icons on top -->
     <div class="whatsapp">
       <a
@@ -278,11 +284,11 @@
       </a>
     </div>
     <div id="topup" class="toparrow">
-      <i  class="fa-solid fa-arrow-up"></i>
+      <i class="fa-solid fa-arrow-up"></i>
     </div>
     <div id="loading">
-        <div class="spinner"></div>
-        <p>Loading...</p>
+      <div class="spinner"></div>
+      <p>Loading...</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="script.js"></script>

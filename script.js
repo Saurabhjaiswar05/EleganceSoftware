@@ -110,41 +110,50 @@ cancel.addEventListener("click",function(){
 
 const emailForm = document.querySelector("#emailForm");
 
-      emailForm.addEventListener("submit",function(e){
+emailForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-        e.preventDefault();
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const subject = document.querySelector("#subject").value;
+  const message = document.querySelector("#message").value;
+  const statusMessage = document.getElementById("statusMessage");
 
-        const name = document.querySelector("#name").value ;
-        const email = document.querySelector("#email").value ;
-        const subject = document.querySelector("#subject").value ;
-        const message = document.querySelector("#message").value ;
-        
-        const templateParams = {
-          from_name: name,
-          from_email: email, 
-          reply_to: email,  
-          subject: subject,
-          message: message,
-        };
+  // Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        emailjs.send("service_yaz0gdu", "template_g6sc0yo", templateParams)
-    .then(function (response) {
-      console.log("Email sent successfully!", response.status, response.text);
-      const statusMessage = document.getElementById('statusMessage');
-      statusMessage.innerText = "Message sent successfully!";
-      statusMessage.style.color = "green";
+  if (!emailRegex.test(email)) {
+    statusMessage.innerText = "Please enter a valid email address.";
+    statusMessage.style.color = "red";
+    return; // Stop execution if email is invalid
+  }
 
-    }, 
-    function (error) {
-      console.error("Failed to send email.", error);
-      const statusMessage = document.getElementById('statusMessage');
-      statusMessage.innerText = "Failed to send message. Please try again.";
-      statusMessage.style.color = "red";
-    });
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    reply_to: email,
+    subject: subject,
+    message: message,
+  };
 
-     emailForm.reset();
+  emailjs
+    .send("service_yaz0gdu", "template_g6sc0yo", templateParams)
+    .then(
+      function (response) {
+        console.log("Email sent successfully!", response.status, response.text);
+        statusMessage.innerText = "Message sent successfully!";
+        statusMessage.style.color = "green";
+      },
+      function (error) {
+        console.error("Failed to send email.", error);
+        statusMessage.innerText = "Failed to send message. Please try again.";
+        statusMessage.style.color = "red";
+      }
+    );
 
-    });
+  emailForm.reset();
+});
+
 
 
     // ============================onLaod======================================
@@ -154,7 +163,7 @@ const emailForm = document.querySelector("#emailForm");
 
       setTimeout(()=>{
         loading.style.display = "none";
-      },2000);
+      },500);
     })
 
 
