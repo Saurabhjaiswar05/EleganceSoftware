@@ -678,7 +678,7 @@ body {
 /*==================================== fotter ============================== */
 
 .footer-section{
-  background-image: url("./assets/FooterImage.jpg");
+  background-image: url("./assets/fbg2.jpg");
   width: 100%;
   height: max-content;
   position: relative;
@@ -731,6 +731,10 @@ body {
   gap: 60px;
   align-items: center;
   justify-content: space-between;
+}
+
+.hr{
+  border: 1px solid black;
 }
 
 
