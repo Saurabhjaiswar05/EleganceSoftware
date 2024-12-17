@@ -163,7 +163,7 @@ emailForm.addEventListener("submit", function (e) {
 
       setTimeout(()=>{
         loading.style.display = "none";
-      },500);
+      },600);
     })
 
 
