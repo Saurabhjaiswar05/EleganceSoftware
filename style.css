@@ -113,7 +113,7 @@ body {
     justify-content: center;
     top: 0;
     right: 0;
-    opacity: 0.9;
+    opacity: 1;
   }
   .navbar .hammer {
     display: block;
@@ -160,7 +160,7 @@ body {
     justify-content: center;
     top: 0;
     right: 0px;
-    opacity: 0.9;
+    opacity: 1;
   }
   .navbar-menu a {
   text-decoration: none;
