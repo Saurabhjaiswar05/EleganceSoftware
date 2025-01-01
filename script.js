@@ -89,6 +89,7 @@ const hideShow = document.querySelector("#hideshow");
 
 hamburger.addEventListener("click",function(){
     cancel.style.display="flex";
+  cancel.style.color="white";
     hamburger.style.display = "none";
     hideShow.style.display = "flex"
     
